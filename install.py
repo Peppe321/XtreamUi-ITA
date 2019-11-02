@@ -30,9 +30,7 @@ def getVersion():
     except: return ""
 
 def printc(rText, rColour=col.OKBLUE, rPadding=0):
-    print "====================================================================================" % (rColour, col.ENDC)
     for i in range(rPadding): print "%s â”‚                                          â”‚ %s" % (rColour, col.ENDC)
-    print "%s â”‚ %s%s%s â”‚ %s" % (rColour, " "*(20-(len(rText)/2)), rText, " "*(40-(20-(len(rText)/2))-len(rText)), col.ENDC)
     for i in range(rPadding): print "%s â”‚                                          â”‚ %s" % (rColour, col.ENDC)
     print "===============================================================================================================" % (rColour, col.ENDC)
     print " "
