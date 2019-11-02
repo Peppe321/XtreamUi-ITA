@@ -197,16 +197,16 @@ if __name__ == "__main__":
                 if rType.upper() == "MAIN":
                     printc("Per favore conserva la tua password di MySQL!")
                     printc(rPassword)
-            else: printc("Installation cancelled", col.FAIL)
+            else: printc("Installazione cancellata!", col.FAIL)
         else: printc("Invalid entries", col.FAIL)
     elif rType.upper() == "ADMIN":
         if os.path.exists("/home/xtreamcodes/iptv_xtream_codes/wwwdir/api.php"):
-            printc("Install Admin Panel?", col.WARNING)
+            printc("Installare pannello Admin?", col.WARNING)
             if raw_input("  ").upper() == "Y":
                 if not install(rType.upper()): sys.exit(1)
                 modifyNginx()
-                printc("Installation completed!", col.OKGREEN, 2)
+                printc("Installazione Completata!", col.OKGREEN, 2)
                 start(False)
                 printc("Admin UI: http://%s:25500" % getIP())
-        else: printc("Install Xtream Codes Main first!", col.FAIL)
-    else: printc("Invalid installation type", col.FAIL)
+        else: printc("Installare prima MainServer poi Admin", col.FAIL)
+    else: printc("Tipo di installazione non valido!", col.FAIL)
